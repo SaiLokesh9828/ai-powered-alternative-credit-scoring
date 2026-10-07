@@ -1,0 +1,22 @@
+{
+  "LIMIT_BAL": 50000,
+  "AGE": 35,
+  "PAY_0": 0,
+  "PAY_2": 0,
+  "PAY_3": 0,
+  "PAY_4": 0,
+  "PAY_5": 0,
+  "PAY_6": 0,
+  "BILL_AMT1": 12000,
+  "BILL_AMT2": 11500,
+  "BILL_AMT3": 10000,
+  "BILL_AMT4": 9500,
+  "BILL_AMT5": 9000,
+  "BILL_AMT6": 8500,
+  "PAY_AMT1": 3000,
+  "PAY_AMT2": 2800,
+  "PAY_AMT3": 2500,
+  "PAY_AMT4": 2400,
+  "PAY_AMT5": 2300,
+  "PAY_AMT6": 2200
+}
