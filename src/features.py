@@ -24,7 +24,10 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     out['payment_volatility'] = payments.std(axis=1).fillna(0)
     out['avg_utilization'] = (bills.div(limit, axis=0)).mean(axis=1).replace([np.inf, -np.inf], np.nan)
     out['max_utilization'] = (bills.div(limit, axis=0)).max(axis=1).replace([np.inf, -np.inf], np.nan)
-    out['avg_payment_ratio'] = payments.div(bills.abs().replace(0, np.nan)).mean(axis=1)
+    out['avg_payment_ratio'] = (
+    payments.sum(axis=1)
+    / bills.abs().sum(axis=1).replace(0, np.nan)
+    )
     out['recent_bill_change'] = out['BILL_AMT1'] - out['BILL_AMT6']
     out['recent_payment_change'] = out['PAY_AMT1'] - out['PAY_AMT6']
     out['total_billed_6m'] = bills.sum(axis=1)
